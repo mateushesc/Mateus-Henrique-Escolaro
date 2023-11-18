@@ -1,9 +1,5 @@
 body {
-    background-image: url(././imgaes/plane.gif);
-    background-repeat: no-repeat;
     background-color: rgb(14, 14, 80);
-    background-attachment: fixed;
-    background-position: center;
     margin: 0;
 }
 
