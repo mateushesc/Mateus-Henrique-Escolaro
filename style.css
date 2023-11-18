@@ -1,0 +1,44 @@
+body {
+    background-image: url(././imgaes/plane.gif);
+    background-repeat: no-repeat;
+    background-color: rgb(14, 14, 80);
+    background-attachment: fixed;
+    background-position: center;
+    height: 100000px;
+    margin: 0;
+}
+
+nav{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul{
+    padding: 0px;
+    margin: 0px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+nav ul a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu{
+    padding: 30px 0px;
+    position:  fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 25px;
+    transition: padding ease-in-out 0.5s;
+}
+
+#menu.shrink{
+    height: 20px;
+    padding: 10px 0px;
+}
