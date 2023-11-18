@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tabela de logins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <header class="header">
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="estatistica.html">Estatísticas</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script src="./login.js"></script>
+<main class="main">
+        <table id="tabela">
+            <tr>
+                <th>Chave</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Ação</th>
+            </tr>
+        </table>
+    </main>
+    <script>
+        const dados = JSON.parse(localStorage.getItem('dados')) || [];
+        const tabela = document.getElementById('tabela');
+
+        function exibirDados(){
+            dados.forEach((item, chave) => {
+                tabela.innerHTML += `
+                <tr>
+                    <td>${chave}</td>
+                    <td>${item.nome}</td>
+                    <td>${item.cpf}</td>
+                    <td>${item.endereco}</td>
+                    <td>${item.telefone}</td>
+                    <td>${item.email}</td>
+                    <td>
+                        <a href="index.html?chave=${chave}">Editar</a>
+                        <a href="#" onclick="remover(${chave})">Excluir</a>
+                    </td>
+                </tr>
+                `;
+            });
+        }
+
+        function remover(chave){
+            dados.splice(chave, 1);
+            localStorage.setItem('dados', JSON.stringify(dados));
+            window.location.href = "./tabela.html";
+        }
+
+        exibirDados();
+    </script>
+    <footer class="footer">
+      <h3>Se você tem interesse na Terra Plana e quer saber mais, nos siga!</h3>
+      <p>Facebook: Terraplanistas <br> Instagram: @Terraplanistas <br> Twitter: terraplanistas</p>
+    </footer>
+  </div>
+</body>
+
+</html>

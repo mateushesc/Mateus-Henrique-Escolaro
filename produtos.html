@@ -37,7 +37,7 @@
       <div class="form">
         <h1>Formulário de Interesse <img src="./images/heart.gif" alt="Coração batendo preto" width="20px"
             height="20px"></h1>
-        <form>
+        <form id="form">
           <label for="nome">Nome:</label>
           <input type="text" name="nome" id="nome">
           <br><br>
@@ -53,7 +53,7 @@
           <label for="email">Email:</label>
           <input type="email" name="email" id="email">
           <br><br>
-          <input type="submit" value="Enviar"> &nbsp; | &nbsp;
+          <button type="button" onclick="salvar()">Enviar</button> &nbsp; | &nbsp;
           <input type="reset" value="Limpar">
         </form>
       </div>
