@@ -22,6 +22,8 @@ body {
 }
 .header{
     grid-area: header;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 nav{
@@ -73,22 +75,22 @@ nav ul a{
     background-repeat: no-repeat;
 }
 
-main {
-    min-height: 1000px;
-}
-
 .main{
     grid-area: main;
     text-align: center;
 }
 
 .item{
+    color: white;
     display: inline-block;
     padding: 20px;
-    width: calc(33.33% - 46px);
-    min-width: 20%px;
     margin: 5px 0px;
-    text-align: center;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer{
