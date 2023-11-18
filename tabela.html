@@ -23,26 +23,26 @@
       </nav>
     </header>
     <script src="./login.js"></script>
-<main class="main">
-        <table id="tabela">
-            <tr>
-                <th>Chave</th>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Endereço</th>
-                <th>Telefone</th>
-                <th>Email</th>
-                <th>Ação</th>
-            </tr>
-        </table>
+    <main class="main">
+      <table id="tabela">
+        <tr>
+          <th>Chave</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Ação</th>
+        </tr>
+      </table>
     </main>
     <script>
-        const dados = JSON.parse(localStorage.getItem('dados')) || [];
-        const tabela = document.getElementById('tabela');
+      const dados = JSON.parse(localStorage.getItem('dados')) || [];
+      const tabela = document.getElementById('tabela');
 
-        function exibirDados(){
-            dados.forEach((item, chave) => {
-                tabela.innerHTML += `
+      function exibirDados() {
+        dados.forEach((item, chave) => {
+          tabela.innerHTML += `
                 <tr>
                     <td>${chave}</td>
                     <td>${item.nome}</td>
@@ -56,16 +56,16 @@
                     </td>
                 </tr>
                 `;
-            });
-        }
+        });
+      }
 
-        function remover(chave){
-            dados.splice(chave, 1);
-            localStorage.setItem('dados', JSON.stringify(dados));
-            window.location.href = "./tabela.html";
-        }
+      function remover(chave) {
+        dados.splice(chave, 1);
+        localStorage.setItem('dados', JSON.stringify(dados));
+        window.location.href = "./tabela.html";
+      }
 
-        exibirDados();
+      exibirDados();
     </script>
     <footer class="footer">
       <h3>Se você tem interesse na Terra Plana e quer saber mais, nos siga!</h3>
