@@ -7,6 +7,16 @@ body {
     margin: 0;
 }
 
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+
 .header, .aside, .main, .footer{
     padding: 20px;
 }
@@ -57,21 +67,12 @@ nav ul a{
     border: 10px solid black;
     border-radius: 10px;
     height: fit-content;
-    background-image: url(./imgaes/wow\ cat.gif);
+    background-image: url(./images/wow\ cat.gif);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 150px auto 100px;
-    grid-template-areas:
-    "header header header"
-    "main main aside"
-    "footer footer footer";
-}
 main {
     min-height: 1000px;
 }
@@ -83,12 +84,9 @@ main {
 
 .item{
     display: inline-block;
-    background-color: aqua;
-    border-top: 3px dotted red;
-    border-right: 1px dotted red;
-    padding: 50px 20px;
+    padding: 20px;
     width: calc(33.33% - 46px);
-    min-width: 200px;
+    min-width: 20%px;
     margin: 5px 0px;
     text-align: center;
 }
