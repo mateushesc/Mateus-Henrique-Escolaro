@@ -4,8 +4,14 @@ body {
     background-color: rgb(14, 14, 80);
     background-attachment: fixed;
     background-position: center;
-    height: 100000px;
     margin: 0;
+}
+
+.header, .aside, .main, .footer{
+    padding: 20px;
+}
+.header{
+    grid-area: header;
 }
 
 nav{
@@ -41,4 +47,60 @@ nav ul a{
 #menu.shrink{
     height: 20px;
     padding: 10px 0px;
+}
+
+.aside{
+    color: white;
+    grid-area: aside;
+    background-color: #0E0E0E;
+    margin-right: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
+    height: fit-content;
+    background-image: url(./imgaes/wow\ cat.gif);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 150px auto 100px;
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+main {
+    min-height: 1000px;
+}
+
+.main{
+    grid-area: main;
+    text-align: center;
+}
+
+.item{
+    display: inline-block;
+    background-color: aqua;
+    border-top: 3px dotted red;
+    border-right: 1px dotted red;
+    padding: 50px 20px;
+    width: calc(33.33% - 46px);
+    min-width: 200px;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: fit-content;
+}
+
+.footer{
+    grid-area: footer;
 }
