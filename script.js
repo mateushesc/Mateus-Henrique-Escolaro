@@ -47,23 +47,28 @@ function salvar() {
 const noticias = [
   {
     texto: "A terra é plana.",
-    imagem: "images/screaming-lee2.gif"
+    imagem: "images/screaming-lee2.gif",
+    cor: "noticia-branca"
   },
   {
     texto: "Muito plana.",
-    imagem: "images/screaming-lee2.gif"
+    imagem: "images/screaming-lee2.gif",
+    cor: "noticia-branca"
   },
   {
     texto: "Não é redonda.",
-    imagem: "images/screaming-lee2.gif"
+    imagem: "images/screaming-lee2.gif",
+    cor: "noticia-branca"
   },
   {
     texto: "É lisa.",
-    imagem: "images/screaming-lee2.gif"
+    imagem: "images/screaming-lee2.gif",
+    cor: "noticia-branca"
   },
   {
     texto: "Muito lisa.",
-    imagem: "images/screaming-lee2.gif"
+    imagem: "images/screaming-lee2.gif",
+    cor: "noticia-branca"
   },
 ];
 
@@ -75,7 +80,7 @@ function exibirNoticias() {
   while (continuar && i < noticias.length) {
     const noticia = noticias[i];
     const noticiaElement = document.createElement('div');
-    noticiaElement.classList.add('noticia');
+    noticiaElement.classList.add('noticia', noticia.cor);
 
     const imagemElement = document.createElement('img');
     imagemElement.src = noticia.imagem;

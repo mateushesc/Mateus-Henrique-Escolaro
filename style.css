@@ -95,6 +95,10 @@ h1, h2 {
     text-align: justify;
 }
 
+.noticia-branca {
+    color: white;
+}
+
 img {
     min-width: 12px;
     max-width: 100%;
