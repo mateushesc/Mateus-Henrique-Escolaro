@@ -44,3 +44,50 @@ function salvar() {
 
   location.reload();
 }
+const noticias = [
+  {
+    texto: "A terra é plana.",
+    imagem: "images/screaming-lee2.gif"
+  },
+  {
+    texto: "Muito plana.",
+    imagem: "images/screaming-lee2.gif"
+  },
+  {
+    texto: "Não é redonda.",
+    imagem: "images/screaming-lee2.gif"
+  },
+  {
+    texto: "É lisa.",
+    imagem: "images/screaming-lee2.gif"
+  },
+  {
+    texto: "Muito lisa.",
+    imagem: "images/screaming-lee2.gif"
+  },
+];
+
+function exibirNoticias() {
+  let i = 0;
+  let continuar = true;
+  const container = document.getElementById('noticias-container');
+
+  while (continuar && i < noticias.length) {
+    const noticia = noticias[i];
+    const noticiaElement = document.createElement('div');
+    noticiaElement.classList.add('noticia');
+
+    const imagemElement = document.createElement('img');
+    imagemElement.src = noticia.imagem;
+    noticiaElement.appendChild(imagemElement);
+
+    const textoElement = document.createElement('p');
+    textoElement.textContent = noticia.texto;
+    noticiaElement.appendChild(textoElement);
+
+    container.appendChild(noticiaElement);
+    i++;
+
+    continuar = confirm("Deseja ver mais notícias? Clique em OK para continuar ou Cancelar para parar.");
+  }
+}
