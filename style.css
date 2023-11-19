@@ -80,10 +80,10 @@ nav ul a {
 .main {
     grid-area: main;
     text-align: center;
-    min-height: 580px;
+    min-height: 607px;
 }
 
-h1 {
+h1, h2 {
     color: white;
 }
 
@@ -96,6 +96,7 @@ h1 {
 }
 
 img {
+    min-width: 12px;
     max-width: 100%;
     height: auto;
 }
